@@ -15,6 +15,9 @@ based on the following criteria:
   - Run script:
 
         python main.py
+  - Run code checkers
+
+        tox -r (run code checkers)
   - Submit your solution
 
 - [ ] Fix all issues found during validation.
