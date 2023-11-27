@@ -130,7 +130,7 @@ Each line of the subsequent lines contains one of the commands described above.
 
 *Output:*
 
-    1 2 3 5 8 13
+    [1, 2, 3, 5, 8, 13]
 
 ### TASK 7
 **split_join.py** (add by yourself): Given a string, you need to reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
