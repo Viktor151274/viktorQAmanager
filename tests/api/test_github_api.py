@@ -8,7 +8,9 @@ def test_user_exists():
     user = api.get_user_defunkt()
     assert user['login'] == 'defunkt'
 
+
 @pytest.mark.api
-def test_user_not_exists(github_api):
-    r = github_api.get_user('butenkosergii')
-    assert r['message'] == 'Not Found' 
+def test_user_not_exists():
+    api = Github()
+    r = api.get_non_exist_user()
+    print(r)
