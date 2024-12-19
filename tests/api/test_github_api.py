@@ -29,3 +29,9 @@ def test_repo_cannot_be_found(github_api):
 def test_repo_with_single_char_be_found(github_api):
     r = github_api.search_repo('s')
     assert r['total_count'] != 0
+
+#individual tasks
+@pytest.mark.api
+def test_search_emoji_by_name(github_api):
+    r2 = github_api.search_emoji_by_name('ukraine')
+    assert 'ukraine' in r2
