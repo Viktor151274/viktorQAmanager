@@ -3,6 +3,8 @@ __pycache__/
 modules/api/clients/__pycache__/
 modules/common/__pycache__/
 modules/ui/page_obects/__pycache__
-tests/
+tests/api/__pycache/
+tests/database/__pycache__
+tests/ui/__pycache__
 *.pyc
 *.pyo
