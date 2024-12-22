@@ -15,11 +15,3 @@ class GitHub:
         body = r.json()
 
         return body
-    
-#individual tasks
-    def search_emoji_by_name(self, name):
-        r2 = requests.get("https://api.github.com/emojis", params={"q":name})
-        body = r2.json()
-
-        return body
-    

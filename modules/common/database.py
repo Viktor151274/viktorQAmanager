@@ -3,6 +3,16 @@ import sqlite3
 
 class Database():
 
+    def get_detailed_orders(self):
+        query = "SELECT orders.id, customers.name, products.name, \
+                products.description, orders.order_date \
+                FROM orders \
+                JOIN customers ON orders.customer_id = customers.id \
+                JOIN products ON orders.product_id = products.id"
+        self.cursor.execute(query)
+        record = self.cursor.fetchall()
+        return record
+    
     def __init__(self):
         self.connection = sqlite3.connect(r'C:\\Users\\Admin\\viktorQAmanager' + r'\\become_qa_auto.db')
         self.cursor = self.connection.cursor()
@@ -46,13 +56,3 @@ class Database():
         query = f"DELETE FROM products WHERE id = {product_id}"
         self.cursor.execute(query)
         self.connection.commit()
-    
-    def get_detailed_orders(self):
-        query = "SELECT orders.id, customers.name, products.name, \
-                products.description, orders.order_date \
-                FROM orders \
-                JOIN customers ON orders.customer_id = customers.id \
-                JOIN products ON orders.product_id = products.id"
-        self.cursor.execute(query)
-        record = self.cursor.fetchall()
-        return record

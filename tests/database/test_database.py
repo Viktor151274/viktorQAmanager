@@ -7,6 +7,28 @@ def test_database_connection():
     db = Database()
     db.test_connection()
 
+@pytest.mark.database
+def test_product_delete():
+    db = Database()
+    db.insert_product(99, 'тестові', 'дані', 999)
+    db.delete_product_by_id(99)
+    qnt = db.select_product_qnt_by_id(99)
+
+    assert len(qnt) == 0
+
+@pytest.mark.database
+def test_detailed_orders():
+    db = Database()
+    orders = db.get_detailed_orders()
+    print("Замовлення", orders)
+    # Check quantity of orders equal to 1
+    assert len(orders) == 1
+
+    # Check struture of data
+    assert orders[0][0] == 1
+    assert orders[0][1] == 'Sergii'
+    assert orders[0][2] == 'солодка вода'
+    assert orders[0][3] == 'з цукром'
 
 @pytest.mark.database
 def test_check_all_users():
@@ -41,25 +63,3 @@ def test_product_insert():
 
     assert water_qnt[0][0] == 30
 
-@pytest.mark.database
-def test_product_delete():
-    db = Database()
-    db.insert_product(99, 'тестові', 'дані', 999)
-    db.delete_product_by_id(99)
-    qnt = db.select_product_qnt_by_id(99)
-
-    assert len(qnt) == 0
-
-@pytest.mark.database
-def test_detailed_orders():
-    db = Database()
-    orders = db.get_detailed_orders()
-    print("Замовлення", orders)
-    # Check quantity of orders equal to 1
-    assert len(orders) == 1
-
-    # Check struture of data
-    assert orders[0][0] == 1
-    assert orders[0][1] == 'Sergii'
-    assert orders[0][2] == 'солодка вода'
-    assert orders[0][3] == 'з цукром'
