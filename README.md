@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Viktor</h1>
-- 👨‍💻 All of my projects are available at [https://github.com/Viktor151274/viktorQAmanager]
+- 👨‍💻 All of my projects are available at [https://github.com/Viktor151274]
 
 - 📫 How to reach me **viktor151274@gmail.com**
 
