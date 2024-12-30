@@ -1,6 +1,6 @@
 
 ## About Me
-Hi, I'm Viktor and this is my first project рџ‘‹
+Hi, I'm Viktor and this is my first project
 
 
 # Project Title
