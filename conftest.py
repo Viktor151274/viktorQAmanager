@@ -1,6 +1,7 @@
 import pytest
 from modules.api.clients.github import GitHub
 from modules.common.database import Database
+from modules.ui.page_objects.base_page import BasePage
 
 
 class User:
@@ -38,3 +39,10 @@ def github_api():
 def database():
     db = Database()
     yield db
+
+
+@pytest.fixture
+def driver():
+    base_page = BasePage()
+    yield base_page.driver
+    base_page.close()

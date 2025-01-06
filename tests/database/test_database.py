@@ -62,4 +62,3 @@ def test_product_insert():
     water_qnt = db.select_product_qnt_by_id(4)
 
     assert water_qnt[0][0] == 30
-

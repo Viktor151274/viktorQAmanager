@@ -1,5 +1,7 @@
 import pytest
 
+from modules.api.clients.github import GitHub
+
 
 @pytest.mark.api
 def test_user_exists(github_api):
@@ -44,3 +46,9 @@ def test_list_releases_found(github_api):
 def test_list_releases_not_found(github_api):
     releases = github_api.list_releases("Viktor151274", "viktor")
     assert releases["status"] == "404"
+
+@pytest.mark.api
+def test_valid_emoji(github_api):
+    emoji_name = "ukraine"
+    r = github_api.get_all_emojis()
+    assert emoji_name in r
