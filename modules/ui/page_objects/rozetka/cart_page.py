@@ -4,7 +4,7 @@ from modules.ui.page_objects.base_page import BasePage
 
 class CartPage(BasePage):
 
-    CART_ITEM = (By.CLASS_NAME, "cart-product__title")  # Update selector as per Rozetka's DOM structure
+    CART_ITEM = (By.CLASS_NAME, "cart-product__title")
 
     def is_product_in_cart(self, product_name):
         cart_items = self.driver.find_elements(*self.CART_ITEM)

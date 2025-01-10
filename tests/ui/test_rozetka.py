@@ -3,9 +3,10 @@ from modules.ui.page_objects.rozetka.main_page import MainPage
 from modules.ui.page_objects.rozetka.product_page import ProductPage
 from modules.ui.page_objects.rozetka.cart_page import CartPage
 
-
+@pytest.mark.ui
 @pytest.mark.rozetka
 def test_add_product_to_cart(driver):
+    # Передаємо driver в конструктори сторінок
     main_page = MainPage(driver)
     product_page = ProductPage(driver)
     cart_page = CartPage(driver)
