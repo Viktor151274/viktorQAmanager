@@ -5,7 +5,7 @@ Hi, I'm Viktor and this is my first project!
 
 # Project Title
 
-This is a project that demonstrates the basic principles of test automation. The project implements automated tests of API and various sites, such as GitHub, Rozetka, NovaPoshta. It contains examples of Python tests using `pytest` and `selenium`
+This is a project that demonstrates the basic principles of test automation. The project implements automated tests of API and various sites, such as GitHub, NovaPoshta. It contains examples of Python tests using `pytest` and `selenium`
 
 ## Requirements
 
@@ -38,11 +38,19 @@ To run all tests:
 pytest
 ```
 
-To run tests with a specific marker:
-
-```sh
-pytest -m "api"
-```
+## Run specific tests by marker:
+   - For API-related tests:
+     ```bash
+     pytest -m api
+     ```
+   - For UI automation tests:
+     ```bash
+     pytest -m ui
+     ```
+   - For database tests:
+     ```bash
+     pytest -m database
+     ```
 
 ## License
 

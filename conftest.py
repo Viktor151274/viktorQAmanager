@@ -46,3 +46,10 @@ def driver():
     base_page = BasePage()
     yield base_page.driver
     base_page.close()
+
+
+@pytest.fixture
+def base_page():
+    page = BasePage()
+    yield page
+    page.close()
