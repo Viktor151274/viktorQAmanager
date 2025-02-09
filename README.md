@@ -5,7 +5,7 @@ Hi, I'm Viktor and this is my first project!
 
 # Project Title
 
-This is a project that demonstrates the basic principles of test automation. The project implements automated tests of API and various sites, such as GitHub, NovaPoshta. It contains examples of Python tests using `pytest` and `selenium`
+This is a project that demonstrates the basic principles of test automation. The project implements automated tests of API and various sites, such as GitHub and NovaPoshta. It contains examples of Python tests using `pytest` and `selenium`
 
 ## Requirements
 
