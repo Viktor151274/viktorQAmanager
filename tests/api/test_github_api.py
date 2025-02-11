@@ -39,7 +39,7 @@ def test_list_commits_on_pr_not_found(github_api):
 def test_list_releases_found(github_api):
     releases = github_api.list_releases("Viktor151274", "viktorQAmanager")
     assert len(releases) >= 1
-    assert releases[0]["tag_name"] == "v1.0.0"
+    assert releases[0]["tag_name"] == "v1.1.0"
     assert releases[0]["author"]["login"] == "Viktor151274"
 
 @pytest.mark.api
